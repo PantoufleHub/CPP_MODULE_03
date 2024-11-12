@@ -32,10 +32,7 @@ ClapTrap::ClapTrap(std::string name, unsigned int health, unsigned int attack)
 	
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	this->_name = other.getName();
-	this->_hit_points = other.getHitPoints();
-	this->_energy_points = other.getEnergyPoints();
-	this->_attack_damage = other.getAttackDamage();
+	*this = other;
 	std::cout << "Copy constructor called" << std::endl;
 	this->announce();
 }
