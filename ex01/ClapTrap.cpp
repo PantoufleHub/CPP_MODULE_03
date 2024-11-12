@@ -3,9 +3,9 @@
 ClapTrap::ClapTrap(void) 
 {
 	this->_name = "Default Name";
-	this->_hit_points = 10;
-	this->_energy_points = 10;
-	this->_attack_damage = 0;
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 	std::cout << "Default constructor called" << std::endl;
 	this->announce();
 }
@@ -13,9 +13,9 @@ ClapTrap::ClapTrap(void)
 ClapTrap::ClapTrap(std::string name) 
 {
 	this->_name = name;
-	this->_hit_points = 10;
-	this->_energy_points = 10;
-	this->_attack_damage = 0;
+	this->_hit_points = 100;
+	this->_energy_points = 50;
+	this->_attack_damage = 20;
 	std::cout << "Name constructor called" << std::endl;
 	this->announce();
 }
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name, unsigned int health, unsigned int attack)
 {
 	this->_name = name;
 	this->_hit_points = health;
-	this->_energy_points = 10;
+	this->_energy_points = 50;
 	this->_attack_damage = attack;
 	std::cout << "Complete constructor called" << std::endl;
 	this->announce();
@@ -32,7 +32,10 @@ ClapTrap::ClapTrap(std::string name, unsigned int health, unsigned int attack)
 	
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	*this = other;
+	this->_name = other.getName();
+	this->_hit_points = other.getHitPoints();
+	this->_energy_points = other.getEnergyPoints();
+	this->_attack_damage = other.getAttackDamage();
 	std::cout << "Copy constructor called" << std::endl;
 	this->announce();
 }
@@ -52,22 +55,22 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "Bye bye " << this->_name << "!" << std::endl;
 }
 
-std::string ClapTrap::getName(void) const
+std::string ClapTrap::getName() const
 {
 	return this->_name;
 }
 
-int ClapTrap::getHitPoints(void) const
+int ClapTrap::getHitPoints() const
 {
 	return this->_hit_points;
 }
 
-int ClapTrap::getEnergyPoints(void) const
+int ClapTrap::getEnergyPoints() const
 {
 	return this->_energy_points;
 }
 
-int ClapTrap::getAttackDamage(void) const
+int ClapTrap::getAttackDamage() const
 {
 	return this->_attack_damage;
 }
