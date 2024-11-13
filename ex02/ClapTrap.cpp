@@ -4,8 +4,8 @@ ClapTrap::ClapTrap(void)
 {
 	this->_name = "Default Name";
 	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_energy_points = 100;
+	this->_attack_damage = 30;
 	std::cout << "Default constructor called" << std::endl;
 	this->announce();
 }
@@ -14,8 +14,8 @@ ClapTrap::ClapTrap(std::string name)
 {
 	this->_name = name;
 	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_energy_points = 100;
+	this->_attack_damage = 30;
 	std::cout << "Name constructor called" << std::endl;
 	this->announce();
 }
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name, unsigned int health, unsigned int attack)
 {
 	this->_name = name;
 	this->_hit_points = health;
-	this->_energy_points = 50;
+	this->_energy_points = 100;
 	this->_attack_damage = attack;
 	std::cout << "Complete constructor called" << std::endl;
 	this->announce();
@@ -47,7 +47,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 	this->_energy_points = other.getEnergyPoints();
 	this->_attack_damage = other.getAttackDamage();
 
-	// std::cout << " = Operator claptrap" << std::endl; 
+	// std::cout << " = Operator claptrap" << std::endl;
 	return *this;
 }
 

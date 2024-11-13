@@ -15,7 +15,7 @@ ScavTrap::ScavTrap(std::string name, unsigned int health, unsigned int attack) :
 	std::cout << "Ello ScavTrap complete constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ClapTrap &other) : ClapTrap(other)
 {
 	std::cout << "Ello ScavTrap copy constructor" << std::endl;
 }
