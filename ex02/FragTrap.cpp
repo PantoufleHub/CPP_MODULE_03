@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap()
+FragTrap::FragTrap(void) : ClapTrap("De")
 {
 	std::cout << "ragTraaaaapap default constructor" << std::endl;
 }
@@ -10,7 +10,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	std::cout << "FFFFFFragTrap name constructor" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name, unsigned int health, unsigned int attack) : ClapTrap(name, health, attack)
+FragTrap::FragTrap(std::string name, unsigned int health, unsigned int energy, unsigned int attack) : ClapTrap(name, health, energy, attack)
 {
 	std::cout << "FragtrtewsdfgTrap complete constructor" << std::endl;
 }

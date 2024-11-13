@@ -14,7 +14,7 @@ class ClapTrap
 	public:
 		ClapTrap();
 		ClapTrap(std::string name);
-		ClapTrap(std::string name, unsigned int health, unsigned int attack);
+		ClapTrap(std::string name, unsigned int health, unsigned int energy, unsigned int attack);
 		ClapTrap(const ClapTrap &other);
 		ClapTrap &operator=(const ClapTrap &other);
 		~ClapTrap();

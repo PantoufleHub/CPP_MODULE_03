@@ -30,7 +30,7 @@ int main (void)
 
 	FragTrap f1;
 	FragTrap f2("Scavos");
-	FragTrap f3("Blipblop", 12345, 54321);
+	FragTrap f3("Blipblop", 12345, 30, 54321);
 	FragTrap f4(f3);
 	f1.attack(f2.getName());
 	f2.takeDamage(f1.getAttackDamage());

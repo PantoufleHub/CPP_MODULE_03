@@ -16,7 +16,7 @@ int main (void)
 
 	ScavTrap s1;
 	ScavTrap s2("Scavos");
-	ScavTrap s3("Blipblop", 12345, 54321);
+	ScavTrap s3("Blipblop", 12345, 20, 54321);
 	ScavTrap s4(s3);
 	// s1 = s4;
 	s1.attack(s2.getName());

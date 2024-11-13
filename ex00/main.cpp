@@ -4,7 +4,7 @@ int main (void)
 {
 	ClapTrap c1;
 	ClapTrap c2("Bibu");
-	ClapTrap c3("Tipu", 99, 25);
+	ClapTrap c3("Tipu", 99, 10, 25);
 	ClapTrap c4(c3);
 
 	c1.attack(c2.getName());

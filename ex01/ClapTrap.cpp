@@ -3,9 +3,9 @@
 ClapTrap::ClapTrap(void) 
 {
 	this->_name = "Default Name";
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_hit_points = 10;
+	this->_energy_points = 10;
+	this->_attack_damage = 0;
 	std::cout << "Default constructor called" << std::endl;
 	this->announce();
 }
@@ -13,18 +13,18 @@ ClapTrap::ClapTrap(void)
 ClapTrap::ClapTrap(std::string name) 
 {
 	this->_name = name;
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_hit_points = 10;
+	this->_energy_points = 10;
+	this->_attack_damage = 0;
 	std::cout << "Name constructor called" << std::endl;
 	this->announce();
 }
 
-ClapTrap::ClapTrap(std::string name, unsigned int health, unsigned int attack) 
+ClapTrap::ClapTrap(std::string name, unsigned int health, unsigned int energy, unsigned int attack) 
 {
 	this->_name = name;
 	this->_hit_points = health;
-	this->_energy_points = 50;
+	this->_energy_points = energy;
 	this->_attack_damage = attack;
 	std::cout << "Complete constructor called" << std::endl;
 	this->announce();

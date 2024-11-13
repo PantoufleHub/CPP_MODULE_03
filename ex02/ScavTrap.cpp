@@ -1,21 +1,21 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap()
+ScavTrap::ScavTrap(void) : ClapTrap("Default name", 100, 50, 20)
 {
 	std::cout << "Ello ScavTrap default constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 {
 	std::cout << "Ello ScavTrap name constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name, unsigned int health, unsigned int attack) : ClapTrap(name, health, attack)
+ScavTrap::ScavTrap(std::string name, unsigned int health, unsigned int energy, unsigned int attack) : ClapTrap(name, health, energy, attack)
 {
 	std::cout << "Ello ScavTrap complete constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ClapTrap &other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
 	std::cout << "Ello ScavTrap copy constructor" << std::endl;
 }
