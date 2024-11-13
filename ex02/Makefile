@@ -1,4 +1,4 @@
-NAME		= trappityscavity
+NAME		= fraggitytrappity
 SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 FLAGS		= -Wall -Werror -Wextra -std=c++98
 CC			= c++
