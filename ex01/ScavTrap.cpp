@@ -30,6 +30,17 @@ void ScavTrap::guardGate(void) const
 		std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode" << std::endl;
 }
 
+void ScavTrap::attack(const std::string &target)
+{
+	if (this->_energy_points >= 1)
+	{
+		std::cout << this->_name << " SCAVATAKS " << target << " for " << this->_attack_damage << " damage!" << std::endl;
+		this->_energy_points -= 1;
+	}
+	else
+		std::cout << this->_name << " is exhausted and can't attack!" << std::endl;
+}
+
 // ScavTrap &ScavTrap::operator=(const ScavTrap &other)
 // {
 // 	this->_name = other.getName();

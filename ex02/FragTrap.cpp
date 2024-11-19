@@ -1,8 +1,8 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap("De")
+FragTrap::FragTrap(void) : ClapTrap("Default name")
 {
-	std::cout << "ragTraaaaapap default constructor" << std::endl;
+	std::cout << "fragTraaaaapap default constructor" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
@@ -22,7 +22,7 @@ FragTrap::FragTrap(const ClapTrap &other) : ClapTrap(other)
 
 FragTrap::~FragTrap(void) 
 {
-	std::cout << "FragTrap " << this->_name << " out" << std::endl;
+	std::cout << "FragTrap " << this->_name << " is leaving" << std::endl;
 }
 
 void FragTrap::highFivesGuys(void) const
